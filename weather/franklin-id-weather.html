@@ -5,10 +5,12 @@
         <title>Franklin, ID | Weather Site</title>
         <meta name="description" content="Franklin Idaho Weather Web Site.">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
     </head>
     <body>
         <header>
-            <h1><img src="images/logo.jpeg" alt="">The Weather Site</h1>
+            <img id="logo" src="images/logo.jpeg" alt="">
+            <p id="site-brand">The Weather Site</p>
             <nav>
                 <ul>
                     <li><a href="#" title="Current Weather page">Current</a></li>
@@ -21,47 +23,53 @@
         </header>
 
         <main>
-            <h2><b>Franklin, Idaho</b></h2>
+            <h1 id="city">Franklin, Idaho</h1>
+            <section id="locationInfo">
             <ul>
-                <li>Zip: 83237 |</li>
-                <li>Elevation: 4501 ft. |</li>
-                <li>Location: 42.0135&#8226;N, 111.8072&#8226;W</li>
+                <li><b>Zip:</b> 83237</li>
+                <li><b>Elevation:</b> 4501 ft.</li>
+                <li><b>Location:</b> 42.0135&deg;N, 111.8072&deg;W</li>
             </ul>
-            <section>
-                <section>
-                   <h3>Temperature</h3>
-                    <ul>
+            </section>
+            <section id="curWeather">
+               <div id="smallConditions">
+                <section id="temps">
+                   <h2>Temperature</h2>
+                    <ul id="temp">
                         <li>24&#8457;</li>
-                        <li>34F</li>
-                        <li>21F</li>
+                        <li id="temp2">34F</li>
+                        <li id="temp3">21F</li>
                         <li>Feels like 21F</li>
                     </ul>
                 </section>
 
-                <section>
-                   <h3>Wind</h3>
+                <section id="wind">
+                   <h2>Wind</h2>
                     <ul>
-                        <li>&#x025EF;</li>
-                        <li>Direction: NW</li>
-                        <li>Gusts: 5mph</li>
+                        <li>N</li>
+                        <li id="circle"></li>
+                        <li id="mph">2mph</li>
+                        <li id="direction"><b>Direction:</b> NW</li>
+                        <li id="gusts"><b>Gusts:</b> 5mph</li>
                     </ul>
                 </section>
+                </div>
 
-                <section>
-                   <h3>Video Forecast</h3>
+                <section id="video">
+                   <h2>Video Forecast</h2>
                     <img src="images/raindrops.jpg" alt="Current Footage of the weather">
                 </section>
-
-                <section>
-                <ul>
-                    <li>compass icon</li>
-                    <li>&#128269;</li>
-                    <li>Favorites</li>
+            </section>
+                <section id="panel-bar">
+                <ul id="panel">
+                    <li><img id='compas' src="images/compas.png" alt="compas icon"></li>
+                    <li><img id="loop" src="images/loop.png" alt="compas icon"></li>
+                    <li><span  id="last">Favorites</span></li>
                 </ul>
                 </section>
-            </section>
 
-            <section>
+
+            <section id="hourly">
                 <h3>Hourly Forecast</h3>
                 <ul>
                     <li>12am:21F |</li>
@@ -72,7 +80,7 @@
                     <li>6am:20F |</li>
                     <li>7am:21F |</li>
                     <li>8am:25F |</li>
-                    <li>9am:28F |</li>
+                    <!--<li>9am:28F |</li>
                     <li>10am:30F |</li>
                     <li>11am:34F |</li>
                     <li>12pm:35F |</li>
@@ -86,8 +94,9 @@
                     <li>8pm:33F |</li>
                     <li>9pm:33F |</li>
                     <li>10pm:31F |</li>
-                    <li>11pm:31F |</li>
+                    <li>11pm:31F |</li>-->
                 </ul>
+                <p>&#62;</p>
             </section>
         </main>
         <footer>&copy;2018 Weather Site</footer>
