@@ -33,18 +33,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Sansita, "second choice", generic-family;
+    font-family: Sansita, "helvetica", generic-family; /*font-family for all headers */
     font-size: 20px;
 }
 
 footer{
     margin-bottom: 2em;
-    display: none;
+    display: none; /*not displayed in a small screen*/
 }
 
 #logo {
     width: 60px;
-    float: left;
+    float: left; /*put logo on the same line with site brand */
     overflow: auto;
 }
 
@@ -56,52 +56,51 @@ header {
     overflow: auto;
     font-size: 2em;
     font-weight: normal;
-    margin-top: 15px;
+    margin-top: 15px; /*alligning vertically*/
     margin-bottom: 0;
 }
 nav {
     line-height: 1.6;
-    display: none;
+    display: none; /*not displayed in a small screen*/
 }
 
 nav ul {
-    padding-left:0;
+    padding-left:0; /*removing left padding*/
 }
 
 nav ul li {
-    display: inline-block;
-    list-style:none;
+    display: inline-block; /*putting nav in one line*/
+    list-style:none; /*removing dots from list*/
     padding-right: 10px;
 }
 
 #locationInfo ul li {
-    display: inline-block;
+    display: inline-block; /*putting list in one line*/
     list-style:none;
-    border-left: 1px solid black;
+    border-left: 1px solid black; /*adding vertical line to the left*/
     padding-right: 10px;
     padding-left: 2px;
     font-size: 0.6em;
 }
 
 #locationInfo ul li:nth-child(1) {
-    border: none;
-}
+    border: none; /*removing vertical line from the first element of the list*/ }
 
 #locationInfo ul {
-    padding-left: 0;
+    padding-left: 0; /*removing standard left padding from the list*/
 }
 
 h1 {
     margin-top: 0;
-    font-weight: 600;
+    font-weight: 600; /*make the heading bold*/
     font-size: 2.5em;
     margin-bottom: 0;
 }
 
 #smallConditions, #video {
-    border: 1px solid black;
-    border-radius: 15px;
-    text-align: center;
+    border: 1px solid black; /*adding border*/
+    border-radius: 15px; /*making border of the right form*/
+    text-align: center; /*align text to the center*/
 }
 
 #smallConditions ul {
@@ -110,13 +109,13 @@ h1 {
 
 #smallConditions {
     margin-bottom: 10px;
-    background-color: rgba(200,200,200,.6);
+    background-color: rgba(200,200,200,.6); /*adding background to the boxes*/
     overflow: auto;
 }
 
 #temps {
     width: 48%;
-    float: left;
+    float: left; /*putting boxes in one line*/
 }
 
 #temp li {
@@ -124,18 +123,18 @@ h1 {
 }
 
 #temp li:first-child{
-    font-size: 4em;
+    font-size: 4em; /*changing font size of the first element*/
 }
 
 #temp li:nth-child(2), #temp li:nth-child(3) {
-    display: inline-block;
+    display: inline-block; /*putting 2 elements of the list in one line*/
     font-size: 1em;
     margin-bottom: 10px;
 
 }
 
 #temp li:nth-child(2) {
-    color: red;
+    color: red; /*changing color of the element*/
     margin-right: 15px;
 }
 
@@ -144,15 +143,18 @@ h1 {
 }
 
 #temp li:last-child {
-    font-size: 1em;
+    font-size: 1em; /*changing size of the last element in the list*/
 }
 
 #wind {
     overflow: auto;
 }
+
 #wind ul {
     padding-left: 0;
 }
+
+/*making circle*/
 #circle {
     width: 100px;
     height: 100px;
@@ -189,7 +191,7 @@ h1 {
 }
 
 #video {
-    background-color: rgba(200,200,200,.6);
+    background-color: rgba(200,200,200,.6); /*putting image on the background of the block*/
 }
 
 #video img {
@@ -198,7 +200,7 @@ h1 {
 }
 
 nav a:link {
-    text-decoration: none;
+    text-decoration: none; /*removing underlines from links*/
 }
 
 #panel {
@@ -224,7 +226,7 @@ nav a:link {
 }
 
 #panel-bar {
-    border: 1px solid black;
+    border: 1px solid black; /*adding border to the navigation bar*/
 }
 
 
