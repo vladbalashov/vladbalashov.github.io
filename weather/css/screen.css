@@ -49,7 +49,7 @@ footer{
 }
 
 header {
-    overflow: auto;
+    overflow: auto; /*done to see the elements that are used under "float" */
 }
 
 #site-brand {
@@ -61,7 +61,18 @@ header {
 }
 nav {
     line-height: 1.6;
-    display: none; /*not displayed in a small screen*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+nav ul li a:link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+header, footer, nav {
+    background-color: #0e89d5;
 }
 
 nav ul {
@@ -227,6 +238,7 @@ nav a:link {
 
 #panel-bar {
     border: 1px solid black; /*adding border to the navigation bar*/
+    display: none;
 }
 
 
