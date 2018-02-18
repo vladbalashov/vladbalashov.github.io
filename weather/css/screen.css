@@ -39,28 +39,30 @@ h1, h2, h3, h4, h5, h6 {
 
 footer{
     margin-bottom: 2em;
-    display: none; /*not displayed in a small screen*/
+}
+
+#siteName {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
 }
 
 #logo {
-    width: 60px;
-    float: left; /*put logo on the same line with site brand */
-    overflow: auto;
+    width: 40px;
 }
 
 header {
-    overflow: auto; /*done to see the elements that are used under "float" */
 }
 
 #site-brand {
     overflow: auto;
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: normal;
-    margin-top: 15px; /*alligning vertically*/
     margin-bottom: 0;
+    margin-top: 0;
 }
 nav {
-    line-height: 1.6;
+    line-height: 0.2em;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -78,21 +80,24 @@ header, footer, nav {
 
 nav ul {
     padding-left:0; /*removing left padding*/
+    display: flex; /*putting nav in one line*/
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
-    display: inline-block; /*putting nav in one line*/
+
     list-style:none; /*removing dots from list*/
     padding-right: 10px;
+    font-size: 0.8em;
 }
 
 #locationInfo ul li {
-    display: inline-block; /*putting list in one line*/
     list-style:none;
     border-left: 1px solid black; /*adding vertical line to the left*/
     padding-right: 10px;
     padding-left: 2px;
-    font-size: 0.6em;
+    font-size: 0.55em;
 }
 
 #locationInfo ul li:nth-child(1) {
@@ -100,6 +105,10 @@ nav ul li {
 
 #locationInfo ul {
     padding-left: 0; /*removing standard left padding from the list*/
+    display: flex; /*putting nav in one line*/
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1 {
@@ -120,6 +129,9 @@ h1 {
 }
 
 #smallConditions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 10px;
     background-color: rgba(200,200,200,.6); /*adding background to the boxes*/
     overflow: auto;
@@ -127,7 +139,6 @@ h1 {
 
 #temps {
     width: 48%;
-    float: left; /*putting boxes in one line*/
 }
 
 #temp li {
@@ -135,7 +146,7 @@ h1 {
 }
 
 #temp li:first-child{
-    font-size: 4em; /*changing font size of the first element*/
+    font-size: 3em; /*changing font size of the first element*/
 }
 
 #temp li:nth-child(2), #temp li:nth-child(3) {
@@ -159,32 +170,30 @@ h1 {
 }
 
 #wind {
-    overflow: auto;
+    width: 58%;
 }
 
 #wind ul {
     padding-left: 0;
 }
 
-/*making circle*/
-#circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid black;
-    margin-left: auto;
-    margin-right: auto;
+#circle img {
+    width: 60%;
+}
+
+#nw {
+    transform: rotate(315deg);
+}
+
+#mph {
+    margin-top: -70px;
+    margin-bottom: 50px;
 }
 
 #direction, #gusts {
     font-size: 0.6em;
 }
 
-#mph {
-    position: absolute;
-    right: 4.2em;
-    top: 14em;
-}
 
 #curWeather {
     border: 2px solid black;
@@ -192,14 +201,40 @@ h1 {
     background-image: url("../images/sunny-winter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #curWeather h2 {
     display: none;
 }
 
-#hourly {
+#hourly h3 {
     display: none;
+}
+
+#hourly ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+    list-style: none;
+    padding: .15em;
+    margin: .25em;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#hourly ul li {
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+#hourly ul li {
+
 }
 
 #video {
@@ -207,7 +242,7 @@ h1 {
 }
 
 #video img {
-    width: 80%;
+    width: 50%;
     margin-top: 5px;
 }
 
