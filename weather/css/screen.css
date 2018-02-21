@@ -44,14 +44,11 @@ footer{
 #siteName {
     display: flex;
     flex-direction: row;
-    align-items: left;
+    align-items: flex-start;
 }
 
 #logo {
     width: 40px;
-}
-
-header {
 }
 
 #site-brand {
