@@ -182,6 +182,10 @@ h1 {
     transform: rotate(315deg);
 }
 
+.sw {
+    transform: rotate(225deg);
+}
+
 #mph {
     margin-top: -70px;
     margin-bottom: 50px;
