@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Sansita, "helvetica", generic-family; /*font-family for all headers */
     font-size: 20px;
 }
+/*All images are going to be the original size*/
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 footer{
     margin-bottom: 2em;

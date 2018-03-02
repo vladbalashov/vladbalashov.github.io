@@ -1,0 +1,15 @@
+.bigScreen {
+    display: none;
+}
+
+@media (min-width:800px) {
+
+    .bigScreen {
+        display: block;
+    }
+
+    .smallScreen {
+        display: none;
+    }
+
+}
