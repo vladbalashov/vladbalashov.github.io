@@ -42,7 +42,7 @@
                             <li>24&#8457;</li>
                             <li id="temp2">34F</li>
                             <li id="temp3">21F</li>
-                            <li>Feels like 21F</li>
+                            <li>Feels like <span id="feelTemp">??</span></li>
                         </ul>
                     </section>
 
@@ -50,7 +50,7 @@
                        <h2>Wind</h2>
                         <ul>
                             <li>N</li>
-                            <li id="circle"><img class="nw" src="images/wind-pointer.png" alt="wind pointer circle"></li>
+                            <li id="circle"><img id="dial" class="nw" src="images/wind-pointer.png" alt="wind pointer circle"></li>
                             <li id="mph">2mph</li>
                             <li id="direction"><b>Direction:</b> NW</li>
                             <li id="gusts"><b>Gusts:</b> 5mph</li>
@@ -106,5 +106,6 @@
             </main>
             <footer>&copy;2018 Weather Site</footer>
         </div>
+        <script src="/weather/js/functions.js"></script>
     </body>
 </html>
