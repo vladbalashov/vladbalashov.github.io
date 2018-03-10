@@ -87,12 +87,13 @@ function windDial(direction){
 //Function will choose the weather condition
 
 function getCondition(phrase) {
+    // checking if the phrase has certain words
     if (phrase.includes("cloudy") || phrase.includes("clouds")){
-        let word = "clouds";
-        console.log(word);
-        return word;
+        let word = "clouds"; //pulling the key word for change image function
+        console.log(word);//checking the console
+        return word;//return the key word to use in another function
 
-    } else if (phrase.includes("rainy") || phrase.includes("rain") || phrase.includes("wet")) {
+    } else if (phrase.includes("rainy") || phrase.includes("rain") || phrase.includes("wet") || phrase.includes("raining")) {
         let word = "rain";
         console.log(word);
         return word;
@@ -109,18 +110,17 @@ function getCondition(phrase) {
         console.log(word);
         return word;
     }
-
-
-
 }
 
 //Function changes the background image
 
 function changeSummaryImage(word) {
+    // get the container
     const curWeather = document.getElementById("curWeather");
+    // determine background image
     switch(word){
         case "clouds":
-            curWeather.setAttribute("class", "clouds");
+            curWeather.setAttribute("class", "clouds"); // clouds is the css rule selector
             break;
         case "rain":
             curWeather.setAttribute("class", "rain");
@@ -136,5 +136,3 @@ function changeSummaryImage(word) {
             break;
     }
 }
-
-//
