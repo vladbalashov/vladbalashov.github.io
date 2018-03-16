@@ -331,6 +331,10 @@ nav a:link {
     display: none;
 }
 
+.hide{
+    display: none;
+}
+
 /* ******************** Large Screen ******************** */
 
 @media screen and (min-width: 750px) {

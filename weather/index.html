@@ -2,11 +2,12 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-        <title>Greenville, SC | Weather Site</title>
+        <title>Franklin, ID | Weather Site</title>
         <meta name="description" content="Franklin Idaho Weather Web Site.">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
     </head>
+    <!-- Vlad Balashov & Sam Prettyman -->
     <body>
        <div>
             <header>
@@ -23,15 +24,16 @@
                         <li><a href="#" title="Springfield Weather page">Springfield</a></li>
                     </ul>
                 </nav>
+                <p id="status"></p>
             </header>
 
-            <main>
-                <h1 id="city">Greenville, South Carolina</h1>
+            <main class="hide" id="main">
+                <h1 id="city"><span id="curCity">Franklin</span>, <span id="curState">Idaho</span></h1>
                 <section id="locationInfo">
                 <ul>
-                    <li><b>Zip:</b> 29601</li>
-                    <li><b>Elevation:</b> 966 ft.</li>
-                    <li><b>Location:</b> -82.4&deg;S, 34.85&deg;W</li>
+                    <li><b>Zip:</b> <span id="zip">83237</span></li>
+                    <li><b>Elevation:</b> <span id="elevation">4501</span> ft.</li>
+                    <li><b>Location:</b> <span id='lat'>42.0135</span>&deg;N, <span id="long">111.8072</span>&deg;W</li>
                 </ul>
                 </section>
                 <section id="curWeather">
@@ -39,10 +41,10 @@
                     <section id="temps">
                        <h2>Temperature</h2>
                         <ul id="temp">
-                            <li>44&#8457;</li>
-                            <li id="temp2">37F</li>
-                            <li id="temp3">53F</li>
-                            <li>Feels like <span id="feelTemp">48</span>F</li>
+                            <li>24&#8457;</li>
+                            <li id="temp2">34F</li>
+                            <li id="temp3">21F</li>
+                            <li>Feels like <span id="feelTemp">??</span>F</li>
                         </ul>
                     </section>
 
@@ -50,17 +52,17 @@
                        <h2>Wind</h2>
                         <ul>
                             <li>N</li>
-                            <li id="circle"><img id="dial" class="sw" src="images/wind-pointer.png" alt="wind pointer circle"></li>
-                            <li id="mph">1mph</li>
-                            <li id="direction"><b>Direction:</b> SW</li>
-                            <li id="gusts"><b>Gusts:</b> 2mph</li>
+                            <li id="circle"><img id="dial" class="nw" src="images/wind-pointer.png" alt="wind pointer circle"></li>
+                            <li id="mph"><span id="speed"></span>mph</li>
+                            <li id="direction"><b>Direction:</b> <span id="windDirection">NW</span></li>
+                            <li id="gusts"><b>Gusts:</b> <span id="windGusts">5</span>mph</li>
                         </ul>
                     </section>
                     </div>
 
                     <section id="video">
                        <h2>Video Forecast</h2>
-                        <img src="images/video.png" alt="Current Footage of the weather">
+                        <img id="logoImage" src="images/video.png" alt="Current Footage of the weather">
                     </section>
                 </section>
                     <section id="panel-bar">
@@ -78,34 +80,35 @@
                         <span id="arrow">&#62;</span>
                     </div>
                     <ul>
-                        <li>12am:39F</li>
-                        <li>1am:38F</li>
-                        <li>3am:38F</li>
-                        <li>4am:37F</li>
-                        <li>5am:37F</li>
-                        <li>6am:36F</li>
-                        <li>7am:36F</li>
-                        <li>8am:36F</li>
-                        <li>9am:37F</li>
-                        <li>10am:40F</li>
-                        <li>11am:44F</li>
-                        <li>12pm:48F</li>
-                        <li>1pm:50F</li>
-                        <li>2pm:51F</li>
-                        <li>3pm:52F</li>
-                        <li>4pm:52F</li>
-                        <li>5pm:53F</li>
-                        <li>6pm:53F</li>
-                        <li>7pm:53F</li>
-                        <li>8pm:51F</li>
-                        <li>9pm:50F</li>
-                        <li>10pm:49F</li>
-                        <li>11pm:49F</li>
+                        <li>12am:21F</li>
+                        <li>1am:20F</li>
+                        <li>3am:20F</li>
+                        <li>4am:20F</li>
+                        <li>5am:20F</li>
+                        <li>6am:20F</li>
+                        <li>7am:21F</li>
+                        <li>8am:25F</li>
+                        <li>9am:28F</li>
+                        <li>10am:30F</li>
+                        <li>11am:34F</li>
+                        <li>12pm:35F</li>
+                        <li>1pm:37F</li>
+                        <li>2pm:38F</li>
+                        <li>3pm:39F</li>
+                        <li>4pm:39F</li>
+                        <li>5pm:38F</li>
+                        <li>6pm:36F</li>
+                        <li>7pm:34F</li>
+                        <li>8pm:33F</li>
+                        <li>9pm:33F</li>
+                        <li>10pm:31F</li>
+                        <li>11pm:31F</li>
                     </ul>
                 </section>
             </main>
-            <footer>&copy;2018 Weather Site</footer>
+            <footer>&copy;2018 Weather Site. <span id="source"></span></footer>
         </div>
         <script src="/weather/js/functions.js"></script>
+        <script src="/weather/js/geo_loc.js"></script>
     </body>
 </html>
