@@ -167,6 +167,7 @@ function displayData(data) {
         const windSpeed = document.getElementById("speed"); //getting html element for wind speed from index.html file
     windSpeed.innerHTML = Math.round(SPEED); // insert information from API to html element
         const PHRASE = data.current_observation.weather; // getting weather condition from API
+        document.getElementById("weatherValue").innerHTML = PHRASE;
         console.log(TEMP + DIRECTION + SPEED + PHRASE); //checking if all elements are displayed
         buildWC(SPEED, TEMP); //calling function to calculate wind chill temperature
         windDial(DIRECTION); //calling function to rotate the wind circle
@@ -181,6 +182,7 @@ function displayData(data) {
         const currentState = document.getElementById("curState"); //getting state information from API
         const STATE = data.current_observation.display_location.state; //getting html element for state info
         currentState.innerHTML = STATE; // write state info to html file
+        document.title = CITY + "," + STATE + " | Weather Site";
         const currentZip = document.getElementById("zip");
         const ZIP = data.current_observation.display_location.zip;
         currentZip.innerHTML = ZIP;
