@@ -41,9 +41,9 @@
                     <section id="temps">
                        <h2>Temperature</h2>
                         <ul id="temp">
-                            <li>24&#8457;</li>
-                            <li id="temp2">34F</li>
-                            <li id="temp3">21F</li>
+                            <li><span id="curTemp"></span>&#8457;</li>
+                            <li id="temp2"><span id="hiTemp">34</span>&#8457;</li>
+                            <li id="temp3"><span id="lowTemp" >21</span>&#8457;</li>
                             <li>Feels like <span id="feelTemp">??</span>F</li>
                         </ul>
                     </section>
@@ -62,7 +62,7 @@
 
                     <section id="video">
                        <h2>Video Forecast</h2>
-                        <img id="logoImage" src="images/video.png" alt="Current Footage of the weather">
+                        <img id="weatherIcon" src="images/video.png" alt="Current Footage of the weather">
                     </section>
                 </section>
                     <section id="panel-bar">
@@ -106,7 +106,9 @@
                     </ul>
                 </section>
             </main>
-            <footer>&copy;2018 Weather Site. <span id="source"></span></footer>
+            <footer>&copy;2018 Weather Site. <span id="source"></span>
+            <img id="logoImage" src="" alt="">
+            </footer>
         </div>
         <script src="/weather/js/functions.js"></script>
         <script src="/weather/js/geo_loc.js"></script>

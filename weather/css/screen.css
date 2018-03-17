@@ -335,6 +335,10 @@ nav a:link {
     display: none;
 }
 
+#video img  {
+    width: 20%;
+}
+
 /* ******************** Large Screen ******************** */
 
 @media screen and (min-width: 750px) {

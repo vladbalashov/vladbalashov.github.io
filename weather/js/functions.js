@@ -154,13 +154,18 @@ function getData(LOCALE) {
 function displayData(data) {
 
     // Task 1 - Feed data to WC, Dial and Image functions
-        const TEMP = data.current_observation.temp_f; //getting temperature from API and store it in TEMP variable
+        const TEMP = data.current_observation.temp_f;
+        //getting temperature from API and store it in TEMP variable
+        const curTemp = document.getElementById("curTemp");
+        curTemp.innerHTML = Math.round(TEMP);
+        //round temperature
+
         const DIRECTION = data.current_observation.wind_dir; //getting wind direction from API and store it in DIRECTION variable
         const windDirection = document.getElementById("windDirection");
         windDirection.innerHTML = DIRECTION;
         const SPEED = data.current_observation.wind_mph; // wind speed
         const windSpeed = document.getElementById("speed"); //getting html element for wind speed from index.html file
-        windSpeed.innerHTML = SPEED; // insert information from API to html element
+    windSpeed.innerHTML = Math.round(SPEED); // insert information from API to html element
         const PHRASE = data.current_observation.weather; // getting weather condition from API
         console.log(TEMP + DIRECTION + SPEED + PHRASE); //checking if all elements are displayed
         buildWC(SPEED, TEMP); //calling function to calculate wind chill temperature
@@ -181,7 +186,7 @@ function displayData(data) {
         currentZip.innerHTML = ZIP;
         const currentElevation = document.getElementById("elevation");
         const ELEVATION = data.current_observation.display_location.elevation;
-        currentElevation.innerHTML = ELEVATION;
+        currentElevation.innerHTML = Math.round(ELEVATION * 3.2808);
         const LATITUDE = data.current_observation.display_location.latitude;
         console.log(LATITUDE);
         const lat = document.getElementById('lat');
@@ -191,13 +196,25 @@ function displayData(data) {
         long.innerHTML = LONGITUDE;
         const gusts = document.getElementById("windGusts");
         const WINDGUST = data.current_observation.wind_gust_mph;
-        gusts.innerHTML = WINDGUST;
+    gusts.innerHTML = Math.round(WINDGUST);
+        //high temperature
+        const HI = data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
+        console.log(HI);
+    document.getElementById("hiTemp").innerHTML = Math.round(HI);
+        //low temperature
+        const LOW = data.forecast.simpleforecast.forecastday[0].low.fahrenheit;
+        console.log(LOW);
+    document.getElementById("lowTemp").innerHTML = Math.round(LOW);
+        //weather icon
+        const ICON = data.current_observation.icon_url;
+        console.log(ICON);
+        document.getElementById("weatherIcon").setAttribute("src", ICON);
 
     // Task 3 - Populate weather information (including the wunderground logo and text in footer)
         const LOGO = data.current_observation.image.url; // getting logo url from API
         const logoImage = document.getElementById("logoImage"); // getting html element
         logoImage.setAttribute("src", LOGO); // set src attribute to the image
-        const TEXT = "Information provided by Weather Underground"; // text to mention where information was taken from
+        const TEXT = "Information provided by"; // text to mention where information was taken from
         const source = document.getElementById("source"); //where the information should be put
         source.innerHTML = TEXT; //writing information to html file
 
