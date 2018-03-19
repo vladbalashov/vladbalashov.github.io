@@ -88,7 +88,7 @@ function windDial(DIRECTION){
 
 function getCondition(PHRASE) {
     // checking if the phrase has certain words
-    if (PHRASE.includes("Cloudy") || PHRASE.includes("Clouds")){
+    if (PHRASE.includes("Cloudy") || PHRASE.includes("Clouds") || PHRASE.includes("Overcast")){
         let word = "clouds"; //pulling the key word for change image function
         console.log(word);//checking the console
         return word;//return the key word to use in another function
