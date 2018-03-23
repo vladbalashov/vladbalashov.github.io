@@ -225,4 +225,6 @@ function displayData(data) {
         STATUS.setAttribute("class", "hide"); //set class to the element
         const mainElement = document.getElementById("main"); // getting main element from HTML
         mainElement.classList.remove("hide"); // removing class hide from main element
+    const searchResults = document.getElementById("searchResults");
+    searchResults.setAttribute("class", "hide");
 }

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
     </head>
-    <!-- Vlad Balashov & Sam Prettyman -->
+    <!-- Vlad Balashov & Sam Prettyman & Jordan Hatch -->
     <body>
        <div>
             <header>
@@ -18,7 +18,7 @@
                 <nav>
                     <ul>
                         <li><a href="index.html" title="Current Weather page">Current</a></li>
-                        <li><a href="/weather/search.html" title="Search Weather page">Search</a></li>
+                        <li><a href="/search.html" title="Search Weather page">Search</a></li>
                         <li><a href="franklin-id-weather.html" title="Franklin Weather page">Franklin</a></li>
                         <li><a href="greenville-sc-weather.html" title="Greenville Weather page">Greenville</a></li>
                         <li><a href="#" title="Springfield Weather page">Springfield</a></li>
@@ -26,7 +26,13 @@
                 </nav>
                 <p id="status"></p>
             </header>
-
+           <section>
+               <form method="get" action="https://wunderground.com/" id="searchform">
+                   <input type="search" name="query" id="query">
+                   <input type="submit" name="submit" value="Search" id="send">
+               </form>
+               <div id="searchResults"></div>
+           </section>
             <main class="hide" id="main">
                 <h1 id="city"><span id="curCity">Franklin</span>, <span id="curState">Idaho</span></h1>
                 <section id="locationInfo">
@@ -111,6 +117,6 @@
             </footer>
         </div>
         <script src="/weather/js/functions.js"></script>
-        <script src="/weather/js/geo_loc.js"></script>
+        <script src="/weather/js/search.js"></script>
     </body>
 </html>
