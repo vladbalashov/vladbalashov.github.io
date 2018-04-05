@@ -39,7 +39,7 @@ function displayData(itemName) {
     } else {
         productDescription.setAttribute("class", "display");
         main.setAttribute("class", "hide");
-        const URL = "/js/acme.json";
+        const URL = "js/acme.json";
         fetch(URL)
             .then(response => response.json())
             .then(function(data){
