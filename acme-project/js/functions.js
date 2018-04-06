@@ -28,6 +28,24 @@ function createNav(data){
     const navigation = document.getElementById("page-nav");
     navigation.innerHTML = list;
 }
+
+let pageNav = document.getElementById("page-nav");
+//adding event listener to navigation bar
+//pageNav.addEventListener("click", function(event){
+//    event.preventDefault();
+//    let itemName = event.target.dataset.name;
+//    console.log(itemName);
+//    displayData(itemName);
+//});
+$(pageNav).on("click", "a", function(evt) {
+    evt.preventDefault(); //prevent going to the different page
+    let itemName = $(this).text().toLowerCase();
+    $('.btn').removeClass('activeLink');
+    $(this).addClass('activeLink');
+    console.log(itemName)
+    displayData(itemName);
+});
+
 //function to display product details
 function displayData(itemName) {
     const productDescription = document.getElementById("productDescription");
@@ -36,6 +54,7 @@ function displayData(itemName) {
     if (itemName==="home"){
         productDescription.setAttribute("class", "hide");
         main.setAttribute("class", "display");
+        document.title = "Acme Home Page";
     } else {
         productDescription.setAttribute("class", "display");
         main.setAttribute("class", "hide");
@@ -55,25 +74,10 @@ function displayData(itemName) {
             document.getElementById("manufacturer").innerHTML = manufacturer;
             document.getElementById("price").innerHTML = price;
             document.getElementById("reviews").innerHTML = reviews;
+            document.title = name+" | Acme";
         })
             .catch(error => console.log('There was an error: ', error))
     }
 }
-let pageNav = document.getElementById("page-nav");
-//adding event listener to navigation bar
-//pageNav.addEventListener("click", function(event){
-//    event.preventDefault();
-//    let itemName = event.target.dataset.name;
-//    console.log(itemName);
-//    displayData(itemName);
-//});
-$(pageNav).on("click", "a", function(evt) {
-              evt.preventDefault();
-var itemName = $(this).text().toLowerCase();
-    $('.btn').removeClass('activeLink');
-    $(this).addClass('activeLink');
-    console.log(itemName)
-displayData(itemName);
-              });
 
 
