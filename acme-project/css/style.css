@@ -9,9 +9,7 @@ body {
    background-color: #ffffff;
 }
 
-header {
-    padding-top: 10px;
-}
+
 
 main {
     margin-left: 10px;
@@ -50,9 +48,15 @@ main {
     font-family: Arial, sans-serif;
 }
 
-nav {
+header {
     background-color: #de2226;
     width: 100%;
+}
+
+.logo {
+    width: 100%;
+    background-color: white;
+    margin-left: 0;
 }
 
 /*
@@ -66,10 +70,11 @@ nav {
  background-color: #fff;
 }
 */
-
+nav {
+    width: 300px;
+}
 nav ul {
     margin-left: -30px;
-    padding-top: 15px;
     padding-bottom: 10px;
     white-space: nowrap;
 }
@@ -84,6 +89,10 @@ nav ul li a:link {
     text-decoration: none;
     padding: 10px 2px 12px 2px;
     font-family: Arial, sans-serif;
+}
+
+#nav {
+    width: 300px;
 }
 
 nav ul li a:visited {

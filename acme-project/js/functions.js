@@ -17,7 +17,7 @@ String.prototype.capitalize = function() {
 //function to create navigation
 function createNav(data){
     console.log(data.items);
-    let list = "<ul>";
+    let list = '<ul id="nav1">';
     list += '<li><a class="activeLink btn" data-name="home" href="index.html" title="home">Home</a></li>';
     list+='<li><a class="btn" data-name="'+ data.items.item_one+'" Title="'+data.items.item_one+'" href="'+data.items.item_one+'.html">'+data.items.item_one.capitalize()+'</a></li>';
     list+='<li><a class="btn" data-name="'+ data.items.item_two+'" Title="'+data.items.item_two+'" href="'+data.items.item_two+'.html">'+data.items.item_two.capitalize()+'</a></li>';
@@ -29,22 +29,25 @@ function createNav(data){
     navigation.innerHTML = list;
 }
 
-let pageNav = document.getElementById("page-nav");
+
 //adding event listener to navigation bar
-//pageNav.addEventListener("click", function(event){
-//    event.preventDefault();
-//    let itemName = event.target.dataset.name;
-//    console.log(itemName);
-//    displayData(itemName);
-//});
-$(pageNav).on("click", "a", function(evt) {
-    evt.preventDefault(); //prevent going to the different page
-    let itemName = $(this).text().toLowerCase();
-    $('.btn').removeClass('activeLink');
-    $(this).addClass('activeLink');
-    console.log(itemName)
-    displayData(itemName);
+let pageNav = document.getElementById("page-nav");
+
+pageNav.addEventListener("click", function(event){
+
+    let itemName = event.target.dataset.name;
+    event.preventDefault();
+    console.log(itemName);
+    let btns = document.getElementsByClassName("activeLink");
+    console.log(btns);
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].classList.remove('activeLink');
+    }
+    event.target.setAttribute("class", "activeLink");
+
+   displayData(itemName);
 });
+
 
 //function to display product details
 function displayData(itemName) {
