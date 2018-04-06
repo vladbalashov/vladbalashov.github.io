@@ -38,7 +38,7 @@ pageNav.addEventListener("click", function(event){
     let itemName = event.target.dataset.name;
     event.preventDefault();
     console.log(itemName);
-    let btns = document.getElementsByClassName("activeLink");
+   let btns = document.getElementsByClassName("activeLink");
     console.log(btns);
     for (let i = 0; i < btns.length; i++) {
         btns[i].classList.remove('activeLink');
